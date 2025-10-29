@@ -3,7 +3,6 @@ import { Toaster } from 'react-hot-toast'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import Home from './pages/Home'
-import './App.css'
 
 function Landing() {
 	return (

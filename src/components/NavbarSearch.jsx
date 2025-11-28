@@ -59,13 +59,15 @@ export default function NavbarSearch() {
             const lowerQuery = query.toLowerCase();
             
             const filtered = allEvents.filter(event => {
-                console.log(event.date);
+                console.log(event);
                 return event.title.toLowerCase().includes(lowerQuery) ||
                 (event.description && event.description.toLowerCase().includes(lowerQuery))
                 || (event.location && event.location.toLowerCase().includes(lowerQuery))
                 || (event.date && event.date.toLowerCase().includes(lowerQuery))
                 || (event.time && event.time.toLowerCase().includes(lowerQuery))
-               
+                || (event._role && event._role.toLowerCase().includes(lowerQuery))
+                || (event.my_status && event.my_status.toLowerCase().includes(lowerQuery))
+                
             });
             
             // const filtered = allEvents.filter(event =>

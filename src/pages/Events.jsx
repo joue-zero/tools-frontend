@@ -53,13 +53,14 @@ export default function Events() {
 
             const allEvents = data?.data || [];
             const query = searchQuery.toLowerCase();
-            console.log(query);
             const filtered = allEvents.filter(event =>
                 event.title.toLowerCase().includes(query) ||
                 (event.description && event.description.toLowerCase().includes(query)) ||
                 (event.location && event.location.toLowerCase().includes(query))
                 || (event.date && event.date.toLowerCase().includes(query))
                 || (event.time && event.time.toLowerCase().includes(query))
+                || (event._role && event._role.toLowerCase().includes(query))
+                || (event.my_status && event.my_status.toLowerCase().includes(query))
             
             );
 
